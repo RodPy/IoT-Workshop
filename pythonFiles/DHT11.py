@@ -8,4 +8,4 @@ while True:
 
     print ('Humedad: ' , humedad)
     print ('Temperatura: ' , temperatura)
-    time.sleep(1) #Cada segundo se evalúa el sensor
+    time.sleep(10) #Cada 10 segundo se evalúa el sensor
