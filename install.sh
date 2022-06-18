@@ -10,3 +10,4 @@ sudo sudo npm install --unsafe-perm -g node-red-contrib-dht-sensor
 sudo systemctl enable nodered.service
 npm install node-red-contrib-dht-sensor
 npm install node-red-dashboard
+pip install paho-mqtt
