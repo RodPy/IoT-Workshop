@@ -14,7 +14,7 @@ GPIO.setup(LED_Verde, GPIO.OUT)
 
 while True:
     sensor = Adafruit_DHT.DHT11 
-    pin = 12 # Pin de conexion del sensor
+    pin = 21 # Pin de conexion del sensor
     humedad, temperatura = Adafruit_DHT.read_retry(sensor, pin)
     print (type(Adafruit_DHT.read_retry(sensor, pin)))
     print(Adafruit_DHT.read_retry(sensor, pin)[0])
@@ -27,7 +27,7 @@ while True:
         GPIO.output(LED_Verde, GPIO.LOW) 
         GPIO.output(LED_Azul, GPIO.LOW) 
 
-    elif temperature <28:
+    elif temperatura <28:
         GPIO.output(LED_Rojo, GPIO.LOW) 
         GPIO.output(LED_Verde, GPIO.LOW) 
         GPIO.output(LED_Azul, GPIO.HIGH) 
