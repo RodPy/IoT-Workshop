@@ -1,8 +1,7 @@
 from paho.mqtt import client as mqtt_client
-import random
 import time
 
-broker = '172.20.10.3'
+broker = '192.168.100.35'
 port = 1883
 
 ## Topic 
@@ -55,10 +54,9 @@ def run():
     # publishone(client)
 
     while True:
-        publish(client,"false",bano)
-        time.sleep(3)
-        publish(client,"true",bano)
-        time.sleep(3)
+        publish(client,"false",sala)
+        time.sleep(1)
+        publish(client,"true",sala)
+        time.sleep(1)
 
-if __name__ == '__main__':
-    run()
+run()
