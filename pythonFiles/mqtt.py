@@ -1,4 +1,3 @@
-
 from paho.mqtt import client as mqtt_client
 import random
 import time
@@ -25,7 +24,7 @@ def connect_mqtt():
     return client
 
 
-def publish(client):
+def publishone(client):
     msg_count = 0
     while True:
         time.sleep(1)
@@ -40,12 +39,26 @@ def publish(client):
             print(f"Mensaje no enviado al topic -> {bano}")
         msg_count += 1
 
+def publish(client,msg,topic):
+    result = client.publish(topic, msg)
+    print (result)        
+    status = result[0] # 0 cuando logra enviar
+    if status == 0:
+        print(f"Enviando `{msg}` al topic `{topic}`")
+    else:
+        print(f"Mensaje no enviado al topic -> {topic}")
 
 def run():
     client = connect_mqtt()
     client.loop_start()
-    publish(client)
+    # publish(client)
+    # publishone(client)
+
+    while True:
+        publish(client,"false",bano)
+        time.sleep(3)
+        publish(client,"true",bano)
+        time.sleep(3)
 
 if __name__ == '__main__':
     run()
-
