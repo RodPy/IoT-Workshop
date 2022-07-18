@@ -1,7 +1,7 @@
 from paho.mqtt import client as mqtt_client
 import time
 
-broker = '192.168.100.35'
+broker = '192.168.100.63'
 port = 1883
 
 ## Topic 
@@ -9,7 +9,7 @@ bano = "rele1"
 sala = "rele2"
 cocina = "rele3"
 dormitorio = "rele4"
-client_id = "RodPy"
+client_id = "Penguin"
 
 def connect_mqtt():
     def on_connect(client, userdata, flags, rc):
