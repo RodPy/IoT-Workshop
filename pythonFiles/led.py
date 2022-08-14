@@ -7,7 +7,7 @@ import RPi.GPIO as GPIO
 import time
 
 LED_PIN = 2 #BCM
-# LED_PIN = 3 #BOARD
+# LED_PIN = 3 #BOARD otra notacion 
 
 
 GPIO.setwarnings(False) 
