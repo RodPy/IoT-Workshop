@@ -13,8 +13,8 @@ client = mqtt.Client(cliente) # Creacion del cliente
 client.connect(servidor_ip,puerto)
 
 ## Creacion de TOPICS
-topic1 = "mesa99/sensor/humedad"
-topic2 = "mesa99/sensor/temperatura"
+topic1 = "mesa9/sensor/humedad"
+topic2 = "mesa9/sensor/temperatura"
 
 ## Publicacion
 while True:
