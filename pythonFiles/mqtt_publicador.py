@@ -23,5 +23,5 @@ while True:
     humedad, temperatura = Adafruit_DHT.read_retry(sensor, pin)
     client.publish(topic1, str(humedad))
     delay(5)
-    client.publish(topic1, str(temperatura))
+    client.publish(topic2, str(temperatura))
     delay(5)
